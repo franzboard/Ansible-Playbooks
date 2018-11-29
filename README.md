@@ -25,11 +25,12 @@ Ansible is a terrific tool for performing installation and configuration tasks o
 	stanza into _hosts_
 
 	`[local]
+
 	localhost ansible_connection=local`
 
   and use this command line:
 
-	`ansible-playbook -i hosts --extra-vars="host=local"`
+	`ansible-playbook -i hosts --extra-vars="host=local" mosquitto.yml`
 
   
 
