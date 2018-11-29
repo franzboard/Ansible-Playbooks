@@ -1,5 +1,5 @@
 # Ansible-Playbooks
-These are mainly intended for classroom use with Raspberry Pi computers.
+Ansible is a terrific tool for performing installation and configuration tasks on multiple hosts, eliminating the need for typing the same commands ever and again. These playbooks are mainly intended for classroom use with Raspberry Pi computers.
 
 ## Prerequisites
 - Generate public ssh key:
