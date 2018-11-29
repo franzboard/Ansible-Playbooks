@@ -1,7 +1,8 @@
 # Ansible-Playbooks
 These are mainly intended for classroom use with Raspberry Pi computers.
 ## Prerequisites
-- Generate public ssh key: `ssh-keygen`
+- Generate public ssh key:
+`ssh-keygen`
 - Copy key to all computers that are to be administrated by Ansible: `ssh-copy-id pi@other-raspi.local`
 - Install Ansible __only__ on teacher's computer: `sudo apt update && sudo apt install ansible -y`
 - Use a system wide (default: _/etc/ansible/hosts_) or local _hosts_ inventory
