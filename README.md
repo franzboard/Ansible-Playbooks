@@ -7,6 +7,6 @@ These are mainly intended for classroom use with Raspberry Pi computers.
 - Use a system wide (default: _/etc/ansible/hosts_) or local _hosts_ inventory
 ## Using the playbooks
 - Install a LAMP stack on all hosts in section _labor_:
-    ansible-playbook -i hosts lamp.yml --extra-vars="host=labor"
+    `ansible-playbook -i hosts lamp.yml --extra-vars="host=labor"`
 - Shutdown all Raspberries in section _test_ at the end of the class:
-    ansible-playbook -i hosts shutdown.yml --extra-vars="host=test"
+    `ansible-playbook -i hosts shutdown.yml --extra-vars="host=test"`
