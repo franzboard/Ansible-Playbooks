@@ -24,9 +24,10 @@ Ansible is a terrific tool for performing installation and configuration tasks o
 - You can also automate local configuration, if you insert the following
 	stanza into _hosts_
 
-	`[local]
-
-	localhost ansible_connection=local`
+	```
+	[local]
+	localhost ansible_connection=local
+	```
 
   and use this command line:
 
