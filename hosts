@@ -1,3 +1,6 @@
+[local]
+localhost ansible_connection=local
+
 [labor]
 lab-01.local
 lab-02.local
@@ -5,6 +8,6 @@ lab-03.local
 lab-04.local
 
 [test]
-raspberrypi.local
+lehrer.local
 testme.local
 
