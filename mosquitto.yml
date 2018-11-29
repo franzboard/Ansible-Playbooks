@@ -1,0 +1,9 @@
+- hosts: '{{ host }}'
+  become: yes
+  tasks:
+
+    - name: install mosquitto
+      apt: name=mosquitto update_cache=yes state=latest
+
+    - name: install mosquitto-clients
+      apt: name=mosquitto-clients update_cache=yes state=latest

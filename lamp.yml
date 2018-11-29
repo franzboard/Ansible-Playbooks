@@ -1,0 +1,35 @@
+- hosts: '{{ host }}'
+  become: yes
+  tasks:
+
+    - name: install apache2
+      apt: name=apache2 update_cache=yes state=latest
+
+    - name: install php module
+      apt: name=libapache2-mod-php update_cache=yes state=latest
+
+    - name: enable mod_userdir
+      apache2_module: name=userdir state=present
+      notify:
+         - restart apache2
+
+    - name: allow php in userdir
+      lineinfile: 
+        dest=/etc/apache2/mods-enabled/php7.0.conf
+        regexp="php_admin_flag engine Off" 
+        line="#php_admin_flag engine Off"
+        state=present
+      notify:
+         - restart apache2
+
+     - name: install mariadb-server
+       apt: name=mariadb-server update_cache=yes state=latest
+
+     - name: install php7.0-mysql
+       apt: name=php7.0-mysql update_cache=yes state=latest
+       notify:
+         - restart apache2
+
+  handlers:
+    - name: restart apache2
+      service: name=apache2 state=restarted
