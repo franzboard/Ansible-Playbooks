@@ -3,7 +3,7 @@
   tasks:
 
     - name: install mosquitto packages
-      apt: name={{ item }}  update_cache=yes state=present
+      apt: name={{ item }}  update_cache=yes state=latest
       with_items:
         - mosquitto
         - mosquitto-clients
